@@ -1,3 +1,5 @@
 .idea
 .DS_Store
-/target
+target/*
+dependency-reduced-pom.xml
+piestimate.iml
