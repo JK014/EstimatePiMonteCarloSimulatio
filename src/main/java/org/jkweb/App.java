@@ -20,7 +20,7 @@ import java.util.Random;
  */
 public class App extends Application {
 
-    private int perRun = 10000;
+    private int perRun = 1000;
     private int points;
     private int dotsOverall;
     private int dotsIn;
@@ -33,8 +33,8 @@ public class App extends Application {
         gc.setLineWidth(1);
         gc.fillRect(0, 0, mainSize + (mainSpacer * 2), mainSize + (mainSpacer * 2));
         gc.strokeRect(mainSpacer, mainSpacer, mainSize, mainSize);
-        gc.strokeLine(mainSize + (mainSpacer * 2), (mainSize) / 2 + (mainSpacer * 2), 0, (mainSize) / 2 + (mainSpacer * 2));
-        gc.strokeLine((mainSize) / 2 + (mainSpacer * 2), 0, (mainSize) / 2 + (mainSpacer * 2), mainSize + (mainSpacer * 2));
+        gc.strokeLine(mainSize + (mainSpacer * 2), (mainSize) / 2.0 + (mainSpacer * 2), 0, (mainSize) / 2.0 + (mainSpacer * 2));
+        gc.strokeLine((mainSize) / 2.0 + (mainSpacer * 2), 0, (mainSize) / 2.0 + (mainSpacer * 2), mainSize + (mainSpacer * 2));
         gc.strokeOval(mainSpacer, mainSpacer, mainSize, mainSize);
     }
 
@@ -52,7 +52,7 @@ public class App extends Application {
                     double y = ran.nextInt((max - min) + 1) + min;
                     double s = Math.sqrt((x*x) + (y*y));
 
-                    if (s < mainSize/2) {
+                    if (s < mainSize/2.0) {
                         dotsIn++;
                         gc.setStroke(Color.YELLOWGREEN);
                     } else {
